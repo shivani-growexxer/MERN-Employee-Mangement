@@ -1,0 +1,19 @@
+# Node modules
+   employee-mangement-backend/node_modules/
+   employee-frontend/node_modules/
+
+   # Environment variables
+   employee-mangement-backend/.env
+   employee-frontend/.env
+
+   # Logs
+   **/logs
+   **/*.log
+   npm-debug.log*
+
+   # OS files
+   .DS_Store
+
+   # IDE files
+   .idea/
+   .vscode/
