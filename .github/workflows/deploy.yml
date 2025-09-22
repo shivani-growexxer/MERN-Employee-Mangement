@@ -16,27 +16,27 @@
        - name: Set up Node.js
          uses: actions/setup-node@v2
          with:
-           node-version: '14'
+           node-version: '18'
 
        - name: Install dependencies
          run: |
            cd employee-mangement-backend
            npm install
-           cd ../employee-mangement-frontend
+           cd ../employee-frontend
            npm install
 
        - name: Build applications
          run: |
            cd employee-mangement-backend
            npm run build
-           cd ../employee-mangement-frontend
+           cd ../employee-frontend
            npm run build
 
        - name: Deploy to AWS
-         env:
-           MONGODB_URI: ${{ secrets.MONGODB_URI }}
-           JWT_SECRET: ${{ secrets.JWT_SECRET }}
-           REDIS_HOST: ${{ secrets.REDIS_HOST }}
+         # env:
+         #   MONGODB_URI: ${{ secrets.MONGODB_URI }}
+         #   JWT_SECRET: ${{ secrets.JWT_SECRET }}
+         #   REDIS_HOST: ${{ secrets.REDIS_HOST }}
          run: |
            echo "Deploying to AWS..."
            # Add your AWS deployment script here
